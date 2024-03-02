@@ -27,33 +27,34 @@ $result = mysqli_query($link, $query);
     </style>
     <title>All posts</title>
 </head>
-<body class="d-flex flex-column justify-content-center align-items-center">
+<body class="d-flex flex-column justify-content-center align-items-center p-5">
 <?php include "./components/navbar.php" ?>
+
+<div class="container text-center m-5">
     <h1>All posts</h1>
-<?php
+    <div class="column">
+    <?php
     if (mysqli_num_rows($result) > 0) {
     // Output data of each row
     while ($row = mysqli_fetch_assoc($result)) {
-        echo '<div class="container d-flex flex-direction-row justify-content-center align-items-center">';
-        echo '<div class="card" style="width: 18rem;">';
+        echo '<div class="card col-3 m-3 w-100" style="width: 18rem;">';
         echo '<div class="card-body">';
-        echo '<h5 class="card-title">' . $row["subject"] . '</h5>';
-        echo '<h5 class="card-title">' . $row["state"] . '</h5>';
-        echo '<h5 class="card-title">' . $row["phone"] . '</h5>';
-        echo '<h5 class="card-title">' . $row["detail"] . '</h5>';
-        echo '<h5 class="card-title">' . $row["state"] . '</h5>';
-        echo '<p class="card-text">' . $row["city"] . '</p>';
+        echo '<h5 class="card-title"> Subject: ' . $row["subject"] . '</h5>';
+        echo '<h5 class="card-title">Phone no: ' . $row["phone"] . '</h5>';
+        echo '<h5 class="card-text"> City:' . $row["city"] . '</h5>';
+        echo '<h5 class="card-title"> State:' . $row["state"] . '</h5>';
+        echo '<p class="card-title">Message:' . $row["detail"] . '</p>';
         // You can display other post details as needed
         echo '<a href="#" class="btn btn-primary">Apply</a>';
-        echo '</div>';
         echo '</div>';
         echo '</div>';
     }
 } else {
     echo "No posts found.";
 }
-
 ?>
+    </div>
+    </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
