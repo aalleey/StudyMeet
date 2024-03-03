@@ -1,18 +1,18 @@
     <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen' ></i>
-            <span class="logo navLogo"><a href="#">Learn & Pay</a></span>
+            <span class="logo navLogo"><a href="../welcome.php">Study Meet</a></span>
 
             <div class="menu">
                 <div class="logo-toggle">
-                    <span class="logo"><a href="#">Learn & Pay</a></span>
+                    <span class="logo"><a href=../"welcome.php">Sudy Meet</a></span>
                     <i class='bx bx-x siderbarClose'></i>
                 </div>
 
                 <ul class="nav-links">
                     <li><a href="welcome.php">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="allposts.php">All Posts</a></li>
+                    <li><a href="./components/tutuors.php">All Teachers</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
