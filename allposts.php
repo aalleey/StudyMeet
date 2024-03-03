@@ -3,10 +3,8 @@
  
     $data = mysqli_query($link, "SELECT * FROM posts");
 
-
-// Fetch all posts from the database
-$query = "SELECT * FROM posts";
-$result = mysqli_query($link, $query);
+    // Fetch all posts from the database
+    $allposts = mysqli_query($link, "SELECT * FROM posts");
  
 ?>
 
@@ -24,6 +22,8 @@ $result = mysqli_query($link, $query);
     <style>
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }
+        .card {
+        }
     </style>
     <title>All posts</title>
 </head>
@@ -34,9 +34,9 @@ $result = mysqli_query($link, $query);
     <h1>All posts</h1>
     <div class="column">
     <?php
-    if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($allposts) > 0) {
     // Output data of each row
-    while ($row = mysqli_fetch_assoc($result)) {
+    while ($row = mysqli_fetch_assoc($allposts)) {
         echo '<div class="card col-3 m-3 w-100" style="width: 18rem;">';
         echo '<div class="card-body">';
         echo '<h5 class="card-title"> Subject: ' . $row["subject"] . '</h5>';
