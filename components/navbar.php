@@ -10,8 +10,8 @@
                 </div>
 
                 <ul class="nav-links">
-                    <li><a href="welcome.php">Home</a></li>
-                    <li><a href="allposts.php">All Posts</a></li>
+                    <li><a href="./welcome.php">Home</a></li>
+                    <li><a href="./allposts.php">All Posts</a></li>
                     <li><a href="./components/tutuors.php">All Teachers</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>

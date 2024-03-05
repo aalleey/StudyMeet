@@ -7,6 +7,11 @@ $data = mysqli_query($link, "SELECT * FROM posts");
 // Fetch all posts from the database
 $query = "SELECT * FROM posts";
 $result = mysqli_query($link, $query);
+// if(!isset($_SESSION['username'])) {
+//     // Redirect to login page
+//     header("Location: ./welcome.php");
+//     exit;
+// }
 
 ?>
 
@@ -20,6 +25,7 @@ $result = mysqli_query($link, $query);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/tutors.css">
     <!-- ===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <style>
@@ -30,6 +36,10 @@ $result = mysqli_query($link, $query);
         .wrapper {
             width: 360px;
             padding: 20px;
+        }
+        .search {
+            border: 2px solid yellow;
+            height: 10vh;
         }
     </style>
     <title>All posts</title>
