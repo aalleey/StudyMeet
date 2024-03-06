@@ -7,6 +7,28 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+session_start();
+
+
+$session_timeout = 1000; 
+session_set_cookie_params($session_timeout);
+
+
+function check_session_timeout() {
+    if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $GLOBALS['session_timeout'])) {
+        // Session expired, destroy session
+        session_unset();
+        session_destroy();
+        // Redirect to a different page or perform any other action
+        header("Location: ./login.php");
+        exit();
+    }
+    // Update last activity time
+    $_SESSION['last_activity'] = time();
+}
+
+// Call the function to check session timeout on each page load
+check_session_timeout();
 ?>
  
 <!DOCTYPE html>

@@ -1,4 +1,26 @@
 <?php
+session_start();
+
+// Check if session variable is set
+if (isset($_SESSION['loggedin']) != true) {
+    // If session is active, redirect to the particular page
+    header("Location: ../login.php");
+    exit(); // Ensure script execution stops after redirection
+}
+include "../config.php";
+
+$data = mysqli_query($link, "SELECT * FROM teacher_data");
+
+
+// Fetch all posts from the database
+$query = "SELECT * FROM teacher_data";
+$result = mysqli_query($link, $query);
+// if(!isset($_SESSION['username'])) {
+//     // Redirect to login page
+//     header("Location: ./welcome.php");
+//     exit;
+// }
+
 
 
 ?>
@@ -31,7 +53,7 @@
             /* margin: 0 auto; */
             width: 100%;
             height: 25vh;
-         
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -57,7 +79,7 @@
 
 <body class="body">
     <?php include "../components/navbar.php" ?>
-   
+
 
     <div class=" searchh container p-5">
         <form action="../components/tutuors.php" class="row g-3">
@@ -84,7 +106,15 @@
         </form>
     </div>
 
-   
+    <div style="border: 1px solid black;" class="container">
+    <div cla></div>
+    <div class="fnam">Ali</div>
+    <div class="lnam">Siddiqui</div>
+
+
+    </div>
+
+
 
 
 
@@ -106,7 +136,7 @@
             document.querySelector('.loader-container').style.display = 'flex';
             setTimeout(function() {
                 document.querySelector('.loader-container').style.display = 'flex';
-            }, 5000); 
+            }, 5000);
             // Hide loader after 5 seconds
             setTimeout(function() {
                 document.querySelector('.').style.display = 'none';
