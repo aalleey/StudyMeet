@@ -1,4 +1,18 @@
 <?php
+
+
+  
+    // Start the session
+    session_start();
+    
+    // Check if session variable is set
+    if(isset($_SESSION['loggedin'] )!=true) {
+        // If session is active, redirect to the particular page
+        header("Location: ./login.php");
+        exit(); // Ensure script execution stops after redirection
+    }
+    
+
 include "config.php";
 
 $data = mysqli_query($link, "SELECT * FROM posts");

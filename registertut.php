@@ -8,6 +8,19 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     exit;
 }
 
+// Check if session variable is set
+if(isset($_SESSION['loggedin'] )!=true) {
+    // If session is active, redirect to the particular page
+    header("Location: ./login.php");
+    exit(); // Ensure script execution stops after redirection
+}
+
+// Start the session
+
+
+
+
+
 // checking the request method 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include "config.php";
@@ -60,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             border: 1px solid black;
             background-color: #fdffcd;
             position: relative;
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
             /* margin-top: 10vh; */
             top: 13vh;
