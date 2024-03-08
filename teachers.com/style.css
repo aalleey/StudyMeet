@@ -1,0 +1,151 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(253, 238, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(253, 238, 0, 1) 0%,
+    rgba(232, 151, 21, 1) 0%,
+    rgba(246, 208, 7, 1) 0%,
+    rgba(255, 0, 244, 1) 0%,
+    rgba(0, 92, 255, 1) 100%,
+    rgba(0, 120, 255, 0.876534085313813) 100%,
+    rgba(156, 255, 0, 1) 100%,
+    rgba(208, 46, 46, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-main {
+  height: 90vh;
+  width: 50vw;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+}
+
+.right-main {
+  height: 90vh;
+  width: 50vw;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* login form css */
+
+.form-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto auto;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #000;
+  position: absolute;
+  width: 400px;
+  height: 430px;
+}
+
+.form-box .header-text {
+  font-size: 32px;
+  font-weight: 600;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.form-box input {
+  margin: 10px 0px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+  font-family: poppins;
+}
+
+.form-box input[type="checkbox"] {
+  display: none;
+}
+
+.form-box label {
+  position: relative;
+  margin-left: 5px;
+  margin-right: 10px;
+  top: 5px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.form-box label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #ddd;
+}
+
+.form-box input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  line-height: 20px;
+}
+
+.form-box span {
+  font-size: 14px;
+}
+
+.form-box button {
+  background-color: deepskyblue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  margin: 20px 0px;
+}
+
+span a {
+  color: #bbb;
+}

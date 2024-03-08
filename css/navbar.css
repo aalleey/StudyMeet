@@ -40,16 +40,6 @@ nav {
   width: 100%;
   background-color: var(--nav-color);
   z-index: 100;
-  background: linear-gradient(
-    90deg,
-    rgba(253, 238, 0, 1) 0%,
-    rgba(246, 208, 7, 1) 15%,
-    rgba(232, 151, 21, 1) 30%,
-    rgba(219, 94, 35, 1) 45%,
-    rgba(208, 46, 46, 1) 60%,
-    rgba(0, 120, 255, 0.876534085313813) 75%,
-    rgba(156, 255, 0, 1) 90%
-  );
 }
 
 body.dark nav {
